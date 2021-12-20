@@ -18,24 +18,36 @@ xmlns:tools="http://schemas.android.com/tools"
       android:allowBackup="false"
       tools:replace="android:theme"
       tools:node="replace"
-      android:theme="@style/AppTheme">
+      android:theme="@style/AppTheme"
+        >
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
         android:launchMode="singleTask"
+          android:exported="true"
         android:windowSoftInputMode="adjustResize">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
+<!--        android:exported="false"-->
 
-       <activity
-        android:name="com.card91.samplecalculator.CalculatorActivity"
-        android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-        android:windowSoftInputMode="adjustResize">
+<!--       <activity-->
+<!--        android:name="io.card91.android.sdk.ui.verification.C91VerifyMobileScreen"-->
+<!--        android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"-->
+<!--        android:windowSoftInputMode="adjustResize"-->
+<!--         >-->
       
-      </activity>
-    </application>
+
+        <activity
+            android:name="io.card91.android.sdk.ui.verification.C91VerifyMobileScreen"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+            android:windowSoftInputMode="adjustResize" >
+    </activity>
+
+</application>
 </manifest>
